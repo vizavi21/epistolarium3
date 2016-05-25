@@ -4,6 +4,9 @@ body {
   padding-top: 20px;
 }
 
+.page-header {
+    background-color: #499E8D;
+}
 .phones {
   list-style: none;
 
@@ -21,7 +24,7 @@ body {
   clear: both;
   height: 115px;
   padding-top: 15px;
-   background-color: coral; 
+   background-color: #FFF6C9; 
 }
 
 /** Detail View **/
@@ -75,3 +78,8 @@ ul.specs > li > span{
 ul.specs dt {
   font-weight: bold;
 }
+
+.detail {
+    margin-right: 60px;
+    margin-left: 60px;
+} 
