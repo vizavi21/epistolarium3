@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="page-header">
+        <h1>Epistolarium Graeco-Latinum</h1>
+        <h2>Late Medieval Letters</h2>
+    </div>
+          <div class="row">
+    <div class="col-md-2" ng-cloak>
+      <!--Sidebar content-->
+
+      Search: <input ng-model="query">
+      Sort by:
+      <!--<select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+      </select>-->
+        
+        Carrier: 
+		<select ng-model="search.carrier">
+			<option value="">All</option>
+			<option value="Best Buy">Best Buy</option>
+			<option value="Cellular South">Cellular South</option>
+			<option value="Verizon">Verizon</option>
+			<option value="AT&T">AtT</option>
+			
+		</select>
+        <br />
+        <br />
+        <br />
+        Ears
+        <select ng-model="search.ears">
+			<option value="">All</option>
+			<option value="two">2</option>
+			<option value="three">3</option>
+			
+		</select>
+        <br />
+        <br />
+        <br />
+        Legs
+        <select ng-model="search.legs">
+			<option value="">All</option>
+			<option value="six">six</option>
+			<option value="seven">Seven</option>
+			
+		</select>
+
+
+        
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="phone in phones | filter:search" class="thumbnail">
+          <a href="#/phones/{{phone.id}}" class="thumb"><img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"></a>
+          <a href="#/phones/{{phone.id}}">{{phone.name}}</a>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
